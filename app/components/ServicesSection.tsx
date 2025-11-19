@@ -61,7 +61,7 @@ export default function ServicesSection() {
         </p>
 
         {/* Stats Bar */}
-        <div className="flex justify-center items-center gap-10 flex-wrap mt-12 p-8 bg-white/15 rounded-3xl backdrop-blur-md shadow-xl w-full">
+        <div className="flex justify-center items-center gap-10 flex-wrap mt-12 p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-xl w-full">
           <div className="text-center px-6">
             <div className="text-4xl font-black mb-2" style={{ color: 'var(--gold)' }}>10,000+</div>
             <div className="text-sm text-white/90 uppercase tracking-wider">Devices Repaired</div>
@@ -84,7 +84,7 @@ export default function ServicesSection() {
         {devices.map((device, index) => (
           <div
             key={index}
-            className="bg-gray-50 px-8 py-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
+            className="bg-white/60 backdrop-blur-sm px-8 py-8 rounded-2xl border border-gray-300/50 transition-all duration-300 hover:bg-white/80 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
             style={{ width: '340px' }}
           >
             <div className="text-7xl mb-6 text-center">{device.emoji}</div>

@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-gray-50 px-8 py-8 rounded-2xl transition-all duration-300 border border-gray-200 hover:border-lime-500 hover:-translate-y-2 hover:shadow-2xl flex-shrink-0"
+            className="bg-white/60 backdrop-blur-sm px-8 py-8 rounded-2xl transition-all duration-300 border border-gray-300/50 hover:border-lime-500 hover:-translate-y-2 hover:shadow-2xl flex-shrink-0"
             style={{ width: '340px' }}
           >
             <div className="text-6xl mb-6 text-center">{feature.icon}</div>
@@ -130,7 +130,7 @@ export default function WhyChooseUs() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 px-8 py-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
+              className="bg-white/60 backdrop-blur-sm px-8 py-8 rounded-2xl border border-gray-300/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
               style={{ width: '340px' }}
             >
               <div className="flex items-center gap-4 mb-6">
@@ -161,7 +161,7 @@ export default function WhyChooseUs() {
         ].map((badge, index) => (
           <div
             key={index}
-            className="bg-gray-50 px-8 py-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-lime-500 hover:shadow-lg flex-shrink-0"
+            className="bg-white/60 backdrop-blur-sm px-8 py-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2 border border-gray-300/50 hover:border-lime-500 hover:shadow-lg flex-shrink-0"
             style={{ minWidth: '220px' }}
           >
             <div className="text-5xl mb-4">{badge.icon}</div>
