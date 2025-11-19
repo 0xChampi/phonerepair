@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-100 via-gray-50 to-lime-50/30">
+    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-100/80 via-gray-50/70 to-lime-50/20 backdrop-blur-sm">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#contact"
-              className="group px-8 py-4 bg-gradient-to-r from-lime-600 to-lime-500 text-white font-semibold rounded-xl hover:from-lime-700 hover:to-lime-600 transition-all hover:shadow-lg hover:scale-105 inline-flex items-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-lime-600/90 to-lime-500/90 backdrop-blur-md text-white font-semibold rounded-xl hover:from-lime-700 hover:to-lime-600 transition-all hover:shadow-lg hover:scale-105 inline-flex items-center gap-2 border border-white/20"
             >
               Get Free Quote
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Hero() {
             </a>
             <a
               href="tel:7576220444"
-              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 hover:border-lime-500 hover:shadow-md transition-all inline-flex items-center gap-2"
+              className="px-8 py-4 bg-white/60 backdrop-blur-md text-gray-900 font-semibold rounded-xl border-2 border-white/40 hover:border-lime-500 hover:shadow-md transition-all inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
