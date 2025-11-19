@@ -93,33 +93,33 @@ export default function ServicesSection() {
             </h3>
 
             <div className="grid grid-cols-2 gap-5 mb-8">
-              <div className="bg-white/30 p-5 rounded-xl text-center">
-                <div className="text-xs text-white/80 uppercase tracking-wider mb-2">From</div>
-                <div className="text-lg font-bold text-white">{device.priceRange}</div>
+              <div className="bg-gray-100 p-5 rounded-xl text-center">
+                <div className="text-xs text-gray-600 uppercase tracking-wider mb-2">From</div>
+                <div className="text-lg font-bold text-gray-900">{device.priceRange}</div>
               </div>
-              <div className="bg-white/30 p-5 rounded-xl text-center">
-                <div className="text-xs text-white/80 uppercase tracking-wider mb-2">Time</div>
-                <div className="text-lg font-bold text-white">{device.repairTime}</div>
+              <div className="bg-gray-100 p-5 rounded-xl text-center">
+                <div className="text-xs text-gray-600 uppercase tracking-wider mb-2">Time</div>
+                <div className="text-lg font-bold text-gray-900">{device.repairTime}</div>
               </div>
             </div>
 
             <div className="mb-8">
-              <div className="text-sm font-bold text-white/90 mb-5 uppercase tracking-wider">Common Repairs:</div>
+              <div className="text-sm font-bold text-gray-700 mb-5 uppercase tracking-wider">Common Repairs:</div>
               <div className="flex flex-wrap gap-3">
                 {device.repairs.slice(0, 4).map((repair, idx) => (
-                  <span key={idx} className="bg-white/25 text-white px-4 py-2 rounded-full text-xs font-semibold">
+                  <span key={idx} className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-xs font-semibold">
                     {repair}
                   </span>
                 ))}
                 {device.repairs.length > 4 && (
-                  <span className="px-4 py-2 rounded-full text-xs font-semibold text-slate-800" style={{ background: 'var(--gold)' }}>
+                  <span className="px-4 py-2 rounded-full text-xs font-semibold text-white bg-lime-600">
                     +{device.repairs.length - 4} more
                   </span>
                 )}
               </div>
             </div>
 
-            <div className="text-center p-5 bg-white/20 rounded-xl text-sm font-semibold text-white mb-8">
+            <div className="text-center p-5 bg-gray-100 rounded-xl text-sm font-semibold text-gray-700 mb-8">
               🛡️ {device.warranty} warranty
             </div>
 

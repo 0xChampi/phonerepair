@@ -69,7 +69,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #65a30d 0%, #84cc16 100%);
     text-align: center;
     position: relative;
 }
@@ -737,7 +737,7 @@ body {
 /* Services Section */
 .services-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--purple) 100%);
+    background: linear-gradient(135deg, var(--lime-green) 0%, #65a30d 100%);
     color: #fff;
     text-align: center;
     position: relative;
@@ -1348,7 +1348,7 @@ footer p {
     max-width: 1200px;
     margin: 60px auto;
     padding: 50px;
-    background: linear-gradient(135deg, var(--teal-green), var(--royal-blue));
+    background: linear-gradient(135deg, var(--lime-green), #65a30d);
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
@@ -1727,7 +1727,7 @@ footer p {
 }
 
 .form-submit-button:hover {
-    background: var(--royal-blue);
+    background: var(--gold);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
