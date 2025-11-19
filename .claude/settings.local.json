@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Read(//Users/innuendo/Downloads/**)",
+      "Read(//var/folders/w0/pn2jwhr90816y2crpmd8dkrr0000gn/T/TemporaryItems/NSIRD_screencaptureui_TDrA71/**)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Read(//var/folders/w0/pn2jwhr90816y2crpmd8dkrr0000gn/T/TemporaryItems/NSIRD_screencaptureui_YAAiMg/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
