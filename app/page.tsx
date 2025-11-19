@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: '88px' }}>
+      <main>
         <Hero />
         <InfoBar />
         <div id="pricing">
@@ -28,7 +28,7 @@ export default function Home() {
           <ContactSection />
         </div>
         <Footer />
-      </div>
+      </main>
       <ChatWidget />
     </>
   );
