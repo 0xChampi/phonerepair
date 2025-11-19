@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-lime-50">
+    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-100 via-gray-50 to-lime-50/30">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{

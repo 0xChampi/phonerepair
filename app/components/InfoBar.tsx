@@ -1,6 +1,6 @@
 export default function InfoBar() {
   return (
-    <div className="bg-gradient-to-r from-lime-600 to-lime-500 text-white py-3 px-4 sm:px-6">
+    <div className="bg-gradient-to-r from-lime-700 to-lime-600 text-white py-3 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm">
         <a href="tel:7576220444" className="flex items-center gap-2 hover:text-lime-100 transition-colors">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
