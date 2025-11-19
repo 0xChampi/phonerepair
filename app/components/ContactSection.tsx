@@ -7,171 +7,250 @@ export default function ContactSection() {
     name: '',
     email: '',
     phone: '',
-    message: '',
+    device: '',
+    issue: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    alert('Thank you for contacting us! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    alert('Thank you! We will contact you soon.');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions or ready to book a repair? Get in touch with us today!
+    <section className="contact-section relative py-24 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        {/* Left Column */}
+        <div className="p-6">
+          <h2 className="text-5xl font-black mb-6" style={{ color: 'var(--gold)' }}>
+            Get Your Free Quote Today
+          </h2>
+          <p className="text-lg text-white/80 mb-12 leading-relaxed">
+            Fill out the form and we&apos;ll get back to you within 30 minutes during business hours.
           </p>
-        </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold">Phone</h4>
-                  <p className="text-gray-600">(555) 123-4567</p>
+          {/* Contact Methods */}
+          <div className="space-y-8 mb-12">
+            {[
+              { icon: '📞', label: 'Call Us', value: '(757) 622-0444', sub: 'Mon-Sat: 10AM-7PM', href: 'tel:7576220444' },
+              { icon: '📧', label: 'Email Us', value: 'info@phoneguys.com', sub: 'Response within 2 hours', href: 'mailto:info@phoneguys.com' },
+              { icon: '📍', label: 'Visit Us', value: '802 Granby St', sub: 'Norfolk, VA 23510', href: 'https://maps.google.com/?q=802+Granby+St+Norfolk+VA+23510' },
+            ].map((method, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-6 p-6 bg-white/5 rounded-2xl border-2 border-white/10 transition-all duration-300 hover:bg-white/10"
+                style={{ '--hover-border': 'var(--gold)' } as React.CSSProperties}
+                onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--gold)'}
+                onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'}
+              >
+                <span className="text-5xl">{method.icon}</span>
+                <div className="flex-1">
+                  <div className="text-xs text-white/60 uppercase tracking-wider mb-2">{method.label}</div>
+                  {method.href ? (
+                    <a href={method.href} className="text-xl font-bold block mb-2 no-underline transition-colors" style={{ color: 'var(--gold)' }}>
+                      {method.value}
+                    </a>
+                  ) : (
+                    <div className="text-xl font-bold mb-2" style={{ color: 'var(--gold)' }}>{method.value}</div>
+                  )}
+                  <div className="text-sm text-white/70">{method.sub}</div>
                 </div>
               </div>
+            ))}
 
-              <div className="flex items-start">
-                <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold">Email</h4>
-                  <p className="text-gray-600">info@phonerepair.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold">Address</h4>
-                  <p className="text-gray-600">123 Main St, Suite 100<br />Your City, ST 12345</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold">Hours</h4>
-                  <p className="text-gray-600">Mon-Fri: 9am-7pm<br />Sat-Sun: 10am-6pm</p>
-                </div>
+            {/* Live Chat */}
+            <div className="flex items-start gap-6 p-6 bg-white/5 rounded-2xl border-2 border-white/10">
+              <span className="text-5xl">💬</span>
+              <div className="flex-1">
+                <div className="text-xs text-white/60 uppercase tracking-wider mb-3">Live Chat</div>
+                <button className="px-6 py-3 border-none rounded-lg font-bold transition-all duration-300 text-white" style={{ background: 'var(--teal-green)' }}>
+                  Start Chat
+                </button>
+                <div className="text-sm text-white/70 mt-2">Available now</div>
               </div>
             </div>
           </div>
 
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
-                  Name
-                </label>
+          {/* Business Hours */}
+          <div className="bg-white/5 p-8 rounded-2xl border-2 border-white/10">
+            <h4 className="text-lg font-bold mb-6" style={{ color: 'var(--gold)' }}>Business Hours</h4>
+            <div className="space-y-4">
+              {[
+                { day: 'Monday - Saturday', time: '10:00 AM - 7:00 PM' },
+                { day: 'Sunday', time: 'Closed' },
+              ].map((hours, index) => (
+                <div key={index} className="flex justify-between text-base text-white/80">
+                  <span>{hours.day}</span>
+                  <span className="font-bold text-white">{hours.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Form */}
+        <div className="p-6">
+          <div className="bg-white/95 p-12 rounded-3xl shadow-2xl">
+            <h3 className="text-3xl font-black text-slate-800 text-center mb-10">Request a Quote</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="flex flex-col gap-2">
+                <label htmlFor="name" className="text-sm font-bold text-gray-800">Your Name *</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  onChange={handleChange}
                   required
+                  placeholder="John Doe"
+                  className="p-4 border-2 border-gray-300 rounded-xl text-base transition-all duration-300 focus:outline-none focus:shadow-lg"
+                  style={{ fontFamily: 'inherit' }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = 'var(--teal-green)';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(0, 139, 125, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#d1d5db';
+                    e.target.style.boxShadow = 'none';
+                  }}
                 />
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                  required
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className="text-sm font-bold text-gray-800">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="john@example.com"
+                    className="p-4 border-2 border-gray-300 rounded-xl text-base transition-all duration-300 focus:outline-none focus:shadow-lg"
+                    style={{ fontFamily: 'inherit' }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = 'var(--teal-green)';
+                      e.target.style.boxShadow = '0 0 0 3px rgba(0, 139, 125, 0.1)';
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = '#d1d5db';
+                      e.target.style.boxShadow = 'none';
+                    }}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="phone" className="text-sm font-bold text-gray-800">Phone *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="(555) 123-4567"
+                    className="p-4 border-2 border-gray-300 rounded-xl text-base transition-all duration-300 focus:outline-none focus:shadow-lg"
+                    style={{ fontFamily: 'inherit' }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = 'var(--teal-green)';
+                      e.target.style.boxShadow = '0 0 0 3px rgba(0, 139, 125, 0.1)';
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = '#d1d5db';
+                      e.target.style.boxShadow = 'none';
+                    }}
+                  />
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-1">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              <div className="flex flex-col gap-2">
+                <label htmlFor="device" className="text-sm font-bold text-gray-800">Device Type *</label>
+                <select
+                  id="device"
+                  name="device"
+                  value={formData.device}
+                  onChange={handleChange}
                   required
-                />
+                  className="p-4 border-2 border-gray-300 rounded-xl text-base transition-all duration-300 focus:outline-none focus:shadow-lg"
+                  style={{ fontFamily: 'inherit' }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = 'var(--teal-green)';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(0, 139, 125, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#d1d5db';
+                    e.target.style.boxShadow = 'none';
+                  }}
+                >
+                  <option value="">Select your device...</option>
+                  <option value="iphone">iPhone</option>
+                  <option value="samsung">Samsung</option>
+                  <option value="laptop">Laptop</option>
+                  <option value="ipad">iPad</option>
+                  <option value="console">Gaming Console</option>
+                  <option value="watch">Smart Watch</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
-                  Message
-                </label>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="issue" className="text-sm font-bold text-gray-800">Describe the Issue *</label>
                 <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  id="issue"
+                  name="issue"
+                  value={formData.issue}
+                  onChange={handleChange}
                   required
+                  rows={4}
+                  placeholder="Tell us what's wrong with your device..."
+                  className="p-4 border-2 border-gray-300 rounded-xl text-base resize-y min-h-[120px] transition-all duration-300 focus:outline-none focus:shadow-lg"
+                  style={{ fontFamily: 'inherit' }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = 'var(--teal-green)';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(0, 139, 125, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#d1d5db';
+                    e.target.style.boxShadow = 'none';
+                  }}
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                className="w-full py-6 text-white border-none rounded-xl text-lg font-black uppercase transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                style={{ background: 'var(--teal-green)' }}
               >
-                Send Message
+                Get Free Quote
               </button>
+
+              <p className="text-xs text-gray-600 text-center mt-4">
+                By submitting, you agree to our terms of service and privacy policy.
+              </p>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Map Section */}
+      <div className="max-w-7xl mx-auto mt-20">
+        <div className="h-96 rounded-3xl overflow-hidden relative" style={{ background: 'linear-gradient(135deg, #34495e, #2c3e50)' }}>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 backdrop-blur-sm">
+            <div className="text-8xl mb-5">📍</div>
+            <div className="text-center">
+              <div className="text-3xl font-black text-white mb-3">Visit Our Store</div>
+              <div className="text-base text-white/90 mb-5">802 Granby St, Norfolk, VA 23510</div>
+              <a href="https://maps.google.com/?q=802+Granby+St+Norfolk+VA+23510" target="_blank" rel="noopener noreferrer" className="text-slate-800 px-8 py-4 border-none rounded-xl text-base font-black transition-all duration-300 hover:bg-white hover:scale-105 inline-block no-underline" style={{ background: 'var(--gold)' }}>
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </div>
