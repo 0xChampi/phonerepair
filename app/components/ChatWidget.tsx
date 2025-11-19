@@ -22,7 +22,7 @@ export default function ChatWidget() {
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-6 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl border-none cursor-pointer group"
-          style={{ background: 'linear-gradient(135deg, var(--teal-green), var(--royal-blue))' }}
+          style={{ background: 'linear-gradient(135deg, var(--lime-green), #65a30d)' }}
         >
           <span className="text-2xl">💬</span>
           <span className="text-white font-bold text-base hidden sm:inline">Chat with us</span>
@@ -36,7 +36,7 @@ export default function ChatWidget() {
           {/* Header */}
           <div
             className="px-6 py-5 text-white flex items-center justify-between"
-            style={{ background: 'linear-gradient(135deg, var(--teal-green), var(--royal-blue))' }}
+            style={{ background: 'linear-gradient(135deg, var(--lime-green), #65a30d)' }}
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-xl">

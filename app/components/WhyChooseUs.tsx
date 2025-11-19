@@ -84,10 +84,8 @@ export default function WhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white/60 px-10 py-10 rounded-3xl transition-all duration-300 border-2 border-transparent hover:bg-white/80 hover:-translate-y-3 hover:shadow-xl flex-shrink-0"
-            style={{ width: '340px', '--hover-border': 'var(--teal-green)' } as React.CSSProperties}
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--teal-green)'}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = 'transparent'}
+            className="bg-white px-8 py-8 rounded-2xl transition-all duration-300 border border-gray-200 hover:border-lime-500 hover:-translate-y-2 hover:shadow-2xl flex-shrink-0"
+            style={{ width: '340px' }}
           >
             <div className="text-6xl mb-6 text-center">{feature.icon}</div>
             <h3 className="text-2xl font-black mb-4 text-center" style={{ color: 'var(--teal-green)' }}>
@@ -107,7 +105,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* Guarantees Section */}
-      <div className="w-full max-w-7xl my-24 p-12 rounded-3xl shadow-2xl" style={{ background: 'linear-gradient(135deg, var(--teal-green), var(--royal-blue))' }}>
+      <div className="w-full max-w-7xl my-24 p-12 rounded-3xl shadow-2xl" style={{ background: 'linear-gradient(135deg, var(--lime-green), #65a30d)' }}>
         <h3 className="text-4xl font-black text-white text-center mb-12 uppercase">Our Guarantees</h3>
         <div className="flex flex-wrap justify-center gap-6 px-6">
           {guarantees.map((guarantee, index) => (
@@ -132,7 +130,7 @@ export default function WhyChooseUs() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/80 px-10 py-10 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex-shrink-0"
+              className="bg-white px-8 py-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
               style={{ width: '340px' }}
             >
               <div className="flex items-center gap-4 mb-6">
@@ -163,7 +161,7 @@ export default function WhyChooseUs() {
         ].map((badge, index) => (
           <div
             key={index}
-            className="bg-white/70 px-10 py-8 rounded-3xl text-center transition-all duration-300 hover:bg-white/90 hover:-translate-y-3 shadow-md hover:shadow-xl flex-shrink-0"
+            className="bg-white px-8 py-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-lime-500 hover:shadow-lg flex-shrink-0"
             style={{ minWidth: '220px' }}
           >
             <div className="text-5xl mb-4">{badge.icon}</div>

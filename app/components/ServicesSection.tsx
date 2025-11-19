@@ -84,7 +84,7 @@ export default function ServicesSection() {
         {devices.map((device, index) => (
           <div
             key={index}
-            className="bg-white/20 backdrop-blur-lg px-10 py-10 rounded-3xl border-2 border-white/30 transition-all duration-300 hover:bg-white/30 hover:-translate-y-3 hover:shadow-2xl flex-shrink-0"
+            className="bg-white/95 backdrop-blur-sm px-8 py-8 rounded-2xl border border-white/50 transition-all duration-300 hover:bg-white hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
             style={{ width: '340px' }}
           >
             <div className="text-7xl mb-6 text-center">{device.emoji}</div>
