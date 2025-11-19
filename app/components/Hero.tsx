@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-teal-50">
+    <section className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-lime-50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Professional Device Repair{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-lime-500">
               You Can Trust
             </span>
           </h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#contact"
-              className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-semibold rounded-xl hover:from-teal-700 hover:to-teal-600 transition-all hover:shadow-lg hover:scale-105 inline-flex items-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-lime-600 to-lime-500 text-white font-semibold rounded-xl hover:from-lime-700 hover:to-lime-600 transition-all hover:shadow-lg hover:scale-105 inline-flex items-center gap-2"
             >
               Get Free Quote
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Hero() {
             </a>
             <a
               href="tel:7576220444"
-              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 hover:border-teal-500 hover:shadow-md transition-all inline-flex items-center gap-2"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 hover:border-lime-500 hover:shadow-md transition-all inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -69,7 +69,7 @@ export default function Hero() {
             { label: 'Years Experience', value: '9+' },
           ].map((stat, index) => (
             <div key={index} className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100">
-              <div className="text-2xl md:text-3xl font-bold text-teal-600 mb-1">{stat.value}</div>
+              <div className="text-2xl md:text-3xl font-bold text-lime-600 mb-1">{stat.value}</div>
               <div className="text-xs md:text-sm text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
