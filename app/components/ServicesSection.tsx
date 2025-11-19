@@ -131,7 +131,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Emergency Banner */}
-      <div className="w-full max-w-7xl rounded-3xl p-12 shadow-2xl" style={{ background: 'linear-gradient(135deg, var(--orange-red), var(--hot-pink))' }}>
+      <div className="w-full max-w-7xl rounded-3xl p-12 shadow-2xl border-4 border-white" style={{ background: 'linear-gradient(135deg, var(--orange-red), var(--hot-pink))' }}>
         <div className="flex items-center justify-between gap-10 flex-wrap">
           <span className="text-6xl flex-shrink-0">🚨</span>
           <div className="flex-1 min-w-[250px]">
