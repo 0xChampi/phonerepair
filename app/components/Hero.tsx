@@ -68,7 +68,7 @@ export default function Hero() {
             { label: 'Customer Rating', value: '4.9★' },
             { label: 'Years Experience', value: '9+' },
           ].map((stat, index) => (
-            <div key={index} className="text-center p-4 bg-white/40 backdrop-blur-sm rounded-xl border border-gray-300/50">
+            <div key={index} className="text-center p-4 bg-white/25 backdrop-blur-md rounded-xl border border-white/30">
               <div className="text-2xl md:text-3xl font-bold text-lime-600 mb-1">{stat.value}</div>
               <div className="text-xs md:text-sm text-gray-600 font-medium">{stat.label}</div>
             </div>

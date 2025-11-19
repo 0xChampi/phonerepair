@@ -52,7 +52,7 @@ export default function ServicesSection() {
 
   return (
     <section className="services-section relative py-32 px-8 flex flex-col items-center">
-      <div className="w-full max-w-7xl mb-24 text-center">
+      <div className="w-full max-w-[1536px] mb-24 text-center">
         <h2 className="section-title text-5xl font-black mb-6" style={{ color: 'var(--gold)' }}>
           Devices We Repair
         </h2>
@@ -80,12 +80,12 @@ export default function ServicesSection() {
       </div>
 
       {/* Devices Grid */}
-      <div className="flex flex-wrap justify-center gap-8 w-full max-w-7xl mb-24 px-6">
+      <div className="flex flex-wrap justify-center gap-8 w-full max-w-[1536px] mb-24 px-6">
         {devices.map((device, index) => (
           <div
             key={index}
-            className="bg-white/60 backdrop-blur-sm px-8 py-8 rounded-2xl border border-gray-300/50 transition-all duration-300 hover:bg-white/80 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
-            style={{ width: '340px' }}
+            className="bg-white/30 backdrop-blur-md px-8 py-8 rounded-2xl border border-white/30 transition-all duration-300 hover:bg-white/50 hover:-translate-y-2 hover:shadow-xl hover:border-lime-500 flex-shrink-0"
+            style={{ width: '360px' }}
           >
             <div className="text-7xl mb-6 text-center">{device.emoji}</div>
             <h3 className="text-3xl font-black text-center mb-8" style={{ color: 'var(--gold)' }}>
@@ -131,7 +131,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Emergency Banner */}
-      <div className="w-full max-w-7xl rounded-3xl p-12 shadow-2xl border-4 border-white" style={{ background: 'linear-gradient(135deg, var(--orange-red), var(--hot-pink))' }}>
+      <div className="w-full max-w-[1536px] rounded-3xl p-12 shadow-2xl border-4 border-white" style={{ background: 'linear-gradient(135deg, var(--orange-red), var(--hot-pink))' }}>
         <div className="flex items-center justify-between gap-10 flex-wrap">
           <span className="text-6xl flex-shrink-0">🚨</span>
           <div className="flex-1 min-w-[250px]">
